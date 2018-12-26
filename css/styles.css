@@ -1,0 +1,125 @@
+#city:-webkit-autofill {
+    background-color: transparent !important;
+}
+
+
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+ main{
+    background-color: rgb(252, 248, 248);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.container{
+    background: rgb(255, 192, 203);
+    width: 500px;
+    /* height: 500px; */
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column
+} 
+
+.location{
+    color: white;
+    font-family: "Thasadith";
+    text-align: center;
+    font-size: 48px;
+}
+
+.unit{
+    text-align: center;
+}
+
+.unit a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "quicksand";
+    transition: background 0.5s;
+    border: 2px solid white
+}
+
+.unit a:hover{
+    background: rgb(223, 167, 176);
+}
+
+#temp{
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    font-family: "Thasadith";
+    font-size: 36px;
+    transition: opacity 2s;
+    animation-fill-mode: forwards;
+    /* opacity: 1; */
+}
+
+.fadeOut{
+    animation: fade 0.5s;
+    /* visibility: hidden; */
+}
+
+.fadeIn{
+    animation: fadeIn 2s;
+}
+
+@keyframes fade{
+    0%{
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes fadeIn{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#get_location{
+    align-self: center;
+    margin-bottom: 20px;
+
+}
+
+#city{
+    background: none;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    transition: border-bottom 1s
+}
+#city::placeholder{
+    color: white;
+    font-family: "Quicksand";
+}
+#city:focus{
+    border-bottom: 2px solid white;
+    box-shadow: none;
+    outline: none;
+    background: none;
+}
+
+#search{
+    text-decoration: none;
+    color: white;
+    font-family: "Quicksand";
+    transition: all 0.5s;
+}
+#search:hover{
+    /* font-weight: bold; */
+    font-size: 52px;
+}
