@@ -45,7 +45,9 @@ body{
     border-radius: 5px;
     font-family: "quicksand";
     transition: background 0.5s;
-    border: 2px solid white
+    border: 2px solid white;
+    transition: opacity 2s;
+    animation-fill-mode: forwards;
 }
 
 .unit a:hover{
@@ -58,7 +60,7 @@ body{
     color: white;
     font-family: "Thasadith";
     font-size: 36px;
-    transition: opacity 2s;
+    transition: opacity 1s;
     animation-fill-mode: forwards;
     /* opacity: 1; */
 }
