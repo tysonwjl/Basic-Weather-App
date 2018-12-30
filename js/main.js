@@ -5,6 +5,7 @@ document.getElementById("search").addEventListener('click', initReq);
 function initReq(){
 
     var temp = document.getElementById("temp");
+    var location = document.getElementById("location")
     temp.classList.add('fadeOut');
     temp.classList.remove('fadeIn');
     
@@ -16,15 +17,23 @@ function initReq(){
 
     xhr.onreadystatechange = function(){
         var a = JSON.parse(xhr.responseText);
-        // console.log(a);
-        temp.innerHTML = a.current.temp_c + " " + "&deg";
+
+        location.style.visibility = "visible";
+
+
+        location.innerHTML = document.getElementById("city").value;
+        location.classList.remove('fadeOut');
+        location.classList.add('fadeIn');
+        setTimeout(function(){
+            city.classList.remove('fadeIn');
+        }, 2000);
+
+        temp.innerHTML = "Currently: " + a.current.temp_c + " " + "&deg";
         temp.classList.remove('fadeOut');
         temp.classList.add('fadeIn');
         setTimeout(function(){
             temp.classList.remove('fadeIn');
         }, 2000);
-        
-        
     }
 
 }
